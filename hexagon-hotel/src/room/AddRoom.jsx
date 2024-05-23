@@ -1,7 +1,7 @@
 import React from 'react'
 import { addRoom } from '../utils/ApiFunction'
 
-const AddRoom = () => {
+const AddRoom = () =>   {
     const [newRoom, setNewRoom] = useState({
         photo: null,
         roomType: "",
@@ -11,18 +11,18 @@ const AddRoom = () => {
     const [successMessage,setSuccessMessage] = useState("") 
     const [errorMessage,setErrorMessage] = useState("")
 
-    const handleRoomInputChange = (e)=> {
-        const name =e.target.name
-        let value = e.target.value
-        if(name === "roomPrice") {
-            if(!isNaN(value)) {
-                value.parseInt(value)
-            }else{
-                value = ""
-            }
-        }
-        setNewRoom(...newRoom,[name]: value)
-    }
+      const handleRoomInputChange = (e)=> {
+          const name =e.target.name
+          let value = e.target.value
+          if(name === "roomPrice") {
+              if(!isNaN(value)) {
+                  value.parseInt(value)
+              }else{
+                  value = ""
+              }
+          }
+          setNewRoom(...newRoom,[name]: value)
+      }
     const handleImageChange = (e)=> {
 
         const selectedImage = e.target.files[0]
