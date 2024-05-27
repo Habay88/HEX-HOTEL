@@ -9,9 +9,8 @@ function App() {
 
   return (
     <>
-    <h1>hello</h1>
-    hello for ral
-    <AddRoom/>
+   
+ <AddRoom/>
 
     </>
   )
