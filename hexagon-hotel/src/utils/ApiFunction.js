@@ -5,7 +5,7 @@ export const api = axios.create({
     baseURL: "http://localhost:8084",
 })
 
-// adds a new room tho the db
+// adds a new room to the db
 export async function addRoom(photo,roomType,roomPrice) {
 
     const formData = new FormData();
@@ -13,7 +13,7 @@ export async function addRoom(photo,roomType,roomPrice) {
     formData.append("roomType",roomType);
     formData.append("roomPrice",roomPrice);
 
-    const response = await axios.post("/rooms/add/new-room",formData)
+    const response = await api.post("/rooms/add/new-room",formData)
     if (response.status === 201) {
         return true
     } else{
