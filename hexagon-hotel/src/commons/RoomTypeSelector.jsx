@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React , {useEffect, useState}from 'react'
 import { getRoomTypes } from '../utils/ApiFunction'
@@ -31,6 +32,7 @@ const RoomTypeSelector = ({handleRoomInputChange, newRoom}) => {
       <select
       id='roomType'
       name='roomType' 
+      // eslint-disable-next-line react/prop-types
       value={newRoom.roomType}
       onChange={(e) =>{
         if(e.target.value ==="Add New") {
@@ -42,8 +44,10 @@ const RoomTypeSelector = ({handleRoomInputChange, newRoom}) => {
       <option value={""}> select a room type</option> 
       <option value={"Add New"}>Add New </option>
       {roomTypes.map((type, index) => (
-        <option key={index}> value={type}
+        <option key={index} value={type}>
+
         {type}
+        
         </option>
       ))}
       </select>
